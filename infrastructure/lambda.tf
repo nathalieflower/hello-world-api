@@ -7,10 +7,10 @@ terraform {
 }
 resource "aws_lambda_function" "lambda" {
   function_name = "HelloWorld"
-  s3_bucket = "hello-world"
-  s3_key    = "v1.0.0/example.zip"
+  s3_bucket = "hello-world-ctm-1"
+  s3_key    = "hello-world.zip"
   handler = "hello-world-lambda.main_handler"
-  runtime = "python3"
+  runtime = "python3.8"
   role = aws_iam_role.lambda_exec.arn
 }
 

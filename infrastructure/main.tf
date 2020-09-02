@@ -1,10 +1,11 @@
 provider "aws" {
-  region = "eu-west -2"
+  region = "eu-west-2"
 }
+
 
 # create s3 bucket for storing code
 resource "aws_s3_bucket" "bucket" {
-  bucket = "hello-world-ctm"
+  bucket = "hello-world-ctm-1"
   acl    = "private"
 
   versioning {
@@ -12,7 +13,8 @@ resource "aws_s3_bucket" "bucket" {
   }
 }
 
-  aws s3 cp example.zip s3://hello-world-ctm/v1.0.0/hello-world.zip
+
+#aws s3 cp example.zip s3://hello-world-ctm/v1.0.0/hello-world.zip
 
 # think about pipelines and how code is deployed into s3
 
