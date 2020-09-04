@@ -1,0 +1,13 @@
+2020/09/03 13:06:25 [INFO] Terraform version: 0.13.1  
+2020/09/03 13:06:25 [INFO] Go runtime version: go1.14.7
+2020/09/03 13:06:25 [INFO] CLI args: []string{"/usr/bin/terraform", "init"}
+2020/09/03 13:06:25 [DEBUG] Attempting to open CLI config file: /home/nathalie/.terraformrc
+2020/09/03 13:06:25 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2020/09/03 13:06:25 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2020/09/03 13:06:25 [DEBUG] ignoring non-existing provider search directory /home/nathalie/.terraform.d/plugins
+2020/09/03 13:06:25 [DEBUG] ignoring non-existing provider search directory /home/nathalie/.local/share/terraform/plugins
+2020/09/03 13:06:25 [DEBUG] ignoring non-existing provider search directory /usr/share/ubuntu/terraform/plugins
+2020/09/03 13:06:25 [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2020/09/03 13:06:25 [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2020/09/03 13:06:25 [DEBUG] ignoring non-existing provider search directory /var/lib/snapd/desktop/terraform/plugins
+2020/09/03 13:06:25 [INFO] CLI command args: []string{"init"}

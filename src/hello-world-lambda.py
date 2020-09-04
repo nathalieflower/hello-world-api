@@ -3,10 +3,12 @@ import json
 
 
 def main_handler(event, context):
-    current_time = datetime.datetime.now()
+    current_time = datetime.datetime.now().ctime()
+    response = "Hello World! It's " + str(current_time)
+    print(response)
     return {
         "statusCode": 200,
-        "body": json.dumps('Hello World : ' + str(current_time))
+        "body": json.dumps(response)
     }
 
 

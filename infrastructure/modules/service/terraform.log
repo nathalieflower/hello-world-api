@@ -1,0 +1,46 @@
+2020/09/04 09:26:27 [INFO] Terraform version: 0.13.1  
+2020/09/04 09:26:27 [INFO] Go runtime version: go1.14.7
+2020/09/04 09:26:27 [INFO] CLI args: []string{"/usr/bin/terraform", "destroy"}
+2020/09/04 09:26:27 [DEBUG] Attempting to open CLI config file: /home/nathalie/.terraformrc
+2020/09/04 09:26:27 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2020/09/04 09:26:27 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2020/09/04 09:26:27 [DEBUG] ignoring non-existing provider search directory /home/nathalie/.terraform.d/plugins
+2020/09/04 09:26:27 [DEBUG] ignoring non-existing provider search directory /home/nathalie/.local/share/terraform/plugins
+2020/09/04 09:26:27 [DEBUG] ignoring non-existing provider search directory /usr/share/ubuntu/terraform/plugins
+2020/09/04 09:26:27 [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2020/09/04 09:26:27 [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2020/09/04 09:26:27 [DEBUG] ignoring non-existing provider search directory /var/lib/snapd/desktop/terraform/plugins
+2020/09/04 09:26:27 [INFO] CLI command args: []string{"destroy"}
+2020/09/04 09:26:27 [TRACE] Meta.Backend: no config given or present on disk, so returning nil config
+2020/09/04 09:26:27 [TRACE] Meta.Backend: backend has not previously been initialized in this working directory
+2020/09/04 09:26:27 [DEBUG] New state was assigned lineage "77f502e9-b130-b3cf-fc41-7ae38a8d45df"
+2020/09/04 09:26:27 [TRACE] Meta.Backend: using default local state only (no backend configuration, and no existing initialized backend)
+2020/09/04 09:26:27 [TRACE] Meta.Backend: instantiated backend of type <nil>
+2020/09/04 09:26:27 [DEBUG] checking for provisioner in "."
+2020/09/04 09:26:27 [DEBUG] checking for provisioner in "/usr/bin"
+2020/09/04 09:26:27 [INFO] Failed to read plugin lock file .terraform/plugins/linux_amd64/lock.json: open .terraform/plugins/linux_amd64/lock.json: no such file or directory
+2020/09/04 09:26:27 [TRACE] Meta.Backend: backend <nil> does not support operations, so wrapping it in a local backend
+2020/09/04 09:26:27 [INFO] backend/local: starting Apply operation
+2020/09/04 09:26:27 [TRACE] backend/local: requesting state manager for workspace "default"
+2020/09/04 09:26:27 [TRACE] backend/local: state manager for workspace "default" will:
+ - read initial snapshot from terraform.tfstate
+ - write new snapshots to terraform.tfstate
+ - create any backup at terraform.tfstate.backup
+2020/09/04 09:26:27 [TRACE] backend/local: requesting state lock for workspace "default"
+2020/09/04 09:26:27 [TRACE] statemgr.Filesystem: preparing to manage state snapshots at terraform.tfstate
+2020/09/04 09:26:27 [TRACE] statemgr.Filesystem: no previously-stored snapshot exists
+2020/09/04 09:26:27 [TRACE] statemgr.Filesystem: locking terraform.tfstate using fcntl flock
+2020/09/04 09:26:27 [TRACE] statemgr.Filesystem: writing lock metadata to .terraform.tfstate.lock.info
+2020/09/04 09:26:27 [TRACE] backend/local: reading remote state for workspace "default"
+2020/09/04 09:26:27 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2020/09/04 09:26:27 [TRACE] statemgr.Filesystem: snapshot file has nil snapshot, but that's okay
+2020/09/04 09:26:27 [TRACE] statemgr.Filesystem: read nil snapshot
+2020/09/04 09:26:27 [TRACE] backend/local: retrieving local state snapshot for workspace "default"
+2020/09/04 09:26:27 [TRACE] backend/local: building context for current working directory
+2020/09/04 09:26:27 [DEBUG] backend/local: will prompt for input of unset required variables [lambda_function_name]
+2020/09/04 09:26:27 [DEBUG] command: asking for input: "var.lambda_function_name"
+2020/09/04 09:26:38 [WARN] backend/local: Failed to request user input for variable "lambda_function_name": interrupted
+2020/09/04 09:26:38 [DEBUG] backend/local: will prompt for input of unset required variables [lambda_function_name]
+2020/09/04 09:26:38 [WARN] backend/local: Failed to request user input for variable "lambda_function_name": interrupted
+2020/09/04 09:26:38 [TRACE] statemgr.Filesystem: removing lock metadata file .terraform.tfstate.lock.info
+2020/09/04 09:26:38 [TRACE] statemgr.Filesystem: unlocking terraform.tfstate using fcntl flock

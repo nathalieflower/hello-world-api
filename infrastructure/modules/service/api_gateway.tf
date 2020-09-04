@@ -5,11 +5,11 @@ resource "aws_api_gateway_rest_api" "hello-world-api-gateway" {
 resource "aws_api_gateway_deployment" "api_deploy" {
   depends_on = [
     aws_api_gateway_integration.lambda,
-    aws_api_gateway_integration.lambda_root,
+     aws_api_gateway_integration.lambda_root,
   ]
 
   rest_api_id = aws_api_gateway_rest_api.hello-world-api-gateway.id
-  stage_name  = "test"
+  stage_name  = "hello-world"
 }
 
 resource "aws_api_gateway_resource" "proxy" {
@@ -32,7 +32,7 @@ resource "aws_api_gateway_integration" "lambda" {
 
   integration_http_method = "GET"
   type                    = "AWS_PROXY"
-  uri                     = aws_lambda_function.hello_world_lambda.invoke_arn
+  uri                     = aws_lambda_function.lambda.invoke_arn
 }
 
 resource "aws_api_gateway_method" "proxy_root" {
@@ -48,10 +48,8 @@ resource "aws_api_gateway_integration" "lambda_root" {
   http_method = aws_api_gateway_method.proxy_root.http_method
 
   integration_http_method = "POST"
-  type                    = "AWS_PROXY"
-  uri                     = aws_lambda_function.hello_world_lambda.invoke_arn
+  type = "AWS_PROXY"
+  uri = aws_lambda_function.lambda.invoke_arn
 }
 
-output "base_url" {
-  value = aws_api_gateway_deployment.api_deploy.invoke_url
-}
+
