@@ -1,7 +1,7 @@
 # hello-world-api
 
 ## Overview
-Gets a hello world string and the current date and time from a generated endpoint.
+Gets a hello world string and the current date and time from a generated endpoint. It logs all calls to cloudwatch for logging and monitoring purposes.
 
 ## Requirements and Dependencies
 
@@ -39,5 +39,18 @@ There is one IAM policy for logging to cloudwatch.
 # API Examples
 `GET http://<aws_generated_url>/hello-world`  
 
-# Deployment instructions 
-Dockerfile. 
+# Deployment and Running Instructions 
+I would have liked to have built a full deployment pipeline, sadly due to time constraints I didn't get it done. Have a few ideas I would like to discuss at interview though.
+
+My short term solution is: 
+
+Ensure you have variables configured in your ~/.aws/credentials file (https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html?icmpid=docs_sso_user_portal)
+
+I have included a docker file that can be built with the following command:
+
+`sudo docker build -t hello-world:latest .`  
+
+and then can be run with
+`sudo docker run hello-world -v home/nathalie/.aws/credentials:/root/.aws/credentials:ro `
+
+After the script has run it will output a url that will take you to the solution.

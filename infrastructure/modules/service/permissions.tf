@@ -50,9 +50,9 @@ resource "aws_iam_role_policy_attachment" "lambda_logs" {
 }
 
 resource "aws_lambda_permission" "api_gateway_perms" {
-  statement_id  = "AllowAPIGatewayInvoke"
-  action        = "lambda:InvokeFunction"
-  function_name = aws_lambda_function.lambda.function_name
-  principal     = "apigateway.amazonaws.com"
-  source_arn = "${aws_api_gateway_rest_api.hello-world-api-gateway.execution_arn}/*/*"
+   statement_id  = "AllowAPIGatewayInvoke"
+   action        = "lambda:InvokeFunction"
+   function_name = aws_lambda_function.lambda.function_name
+   principal     = "apigateway.amazonaws.com"
+   source_arn = "${aws_api_gateway_rest_api.hello-world-api-gateway.execution_arn}/*/*"
 }
