@@ -3,6 +3,9 @@ module "service" {
   lambda_function_name = var.lambda_function_name
 }
 
+provider "aws" {
+  region = "eu-west-2"
+}
 
 #put information for state s3 bucket here.
 terraform {
